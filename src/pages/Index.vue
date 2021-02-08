@@ -1,7 +1,7 @@
 <template>
   <q-page class="flex flex-center">
     <img
-      alt="Quasar logo"
+      alt="Potiso logo"
       src="~assets/quasar-logo-full.svg"
     >
   </q-page>

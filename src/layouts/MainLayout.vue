@@ -12,10 +12,10 @@
         />
 
         <q-toolbar-title>
-          Quasar App
+          Pot'Iso App
         </q-toolbar-title>
 
-        <div>Quasar v{{ $q.version }}</div>
+        <div>Pot'Iso v{{ $q.version }}</div>
       </q-toolbar>
     </q-header>
 
@@ -52,45 +52,45 @@ import EssentialLink from 'components/EssentialLink.vue'
 const linksData = [
   {
     title: 'Docs',
-    caption: 'quasar.dev',
+    caption: 'potiso.dev',
     icon: 'school',
-    link: 'https://quasar.dev'
+    link: 'https://potiso.dev'
   },
   {
     title: 'Github',
-    caption: 'github.com/quasarframework',
+    caption: 'github.com/potisoframework',
     icon: 'code',
-    link: 'https://github.com/quasarframework'
+    link: 'https://github.com/potisoframework'
   },
   {
     title: 'Discord Chat Channel',
-    caption: 'chat.quasar.dev',
+    caption: 'chat.potiso.dev',
     icon: 'chat',
-    link: 'https://chat.quasar.dev'
+    link: 'https://chat.potiso.dev'
   },
   {
     title: 'Forum',
-    caption: 'forum.quasar.dev',
+    caption: 'forum.potiso.dev',
     icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev'
+    link: 'https://forum.potiso.dev'
   },
   {
     title: 'Twitter',
-    caption: '@quasarframework',
+    caption: '@potisoframework',
     icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev'
+    link: 'https://twitter.potiso.dev'
   },
   {
     title: 'Facebook',
-    caption: '@QuasarFramework',
+    caption: '@Pot\'IsoFramework',
     icon: 'public',
-    link: 'https://facebook.quasar.dev'
+    link: 'https://facebook.potiso.dev'
   },
   {
-    title: 'Quasar Awesome',
-    caption: 'Community Quasar projects',
+    title: 'Pot\'Iso Awesome',
+    caption: 'Community Pot\'Iso projects',
     icon: 'favorite',
-    link: 'https://awesome.quasar.dev'
+    link: 'https://awesome.potiso.dev'
   }
 ]
 
