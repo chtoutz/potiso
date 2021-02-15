@@ -1,30 +1,30 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
-      <q-toolbar>
-        <q-btn
-          flat
-          dense
-          round
-          icon="menu"
-          aria-label="Menu"
-          @click="leftDrawerOpen = !leftDrawerOpen"
-        />
+  <q-layout view="hHh lpR fff">
+    <q-header reveal elevated class="bg-primary text-white" height-hint="98">
+      <q-toolbar class="bg-light-green">
+        <q-btn dense flat round icon="menu" aria-label="Left menu" @click="leftDrawerOpen = !leftDrawerOpen" />
 
         <q-toolbar-title>
-          Pot'Iso App
+          <q-avatar>
+            <img src="https://cdn.quasar.dev/logo/svg/quasar-logo.svg">
+          </q-avatar>
+          Pot'Iso
         </q-toolbar-title>
 
-        <div>Pot'Iso v{{ $q.version }}</div>
+        <q-btn flat round dense icon="account_circle" class="q-mr-xs" />
+
+        <q-btn dense flat round icon="menu" aria-label="Right menu" @click="rightDrawerOpen = !rightDrawerOpen" />
       </q-toolbar>
+
+      <q-tabs align="left" class="bg-light-green-5">
+        <q-route-tab to="/potager" label="Potager" />
+        <q-route-tab to="/outilage" label="Outillage" />
+        <q-route-tab to="/accessoires" label="Accessoires" />
+        <q-route-tab to="/grainotheque" label="Grainothèque" />
+      </q-tabs>
     </q-header>
 
-    <q-drawer
-      v-model="leftDrawerOpen"
-      show-if-above
-      bordered
-      content-class="bg-grey-1"
-    >
+    <q-drawer show-if-above v-model="leftDrawerOpen" side="left" bordered content-class="bg-grey-1">
       <q-list>
         <q-item-label
           header
@@ -40,9 +40,25 @@
       </q-list>
     </q-drawer>
 
+    <q-drawer show-if-above v-model="rightDrawerOpen" side="right" bordered>
+      <!-- drawer content -->
+    </q-drawer>
+
     <q-page-container>
       <router-view />
     </q-page-container>
+
+    <q-footer elevated class="bg-grey-7 text-white">
+      <q-toolbar>
+        <q-toolbar-title>
+          <!-- <q-avatar>
+            <img src="https://cdn.quasar.dev/logo/svg/quasar-logo.svg">
+          </q-avatar> -->
+          Footer
+        </q-toolbar-title>
+        Quasar v{{ $q.version }}
+      </q-toolbar>
+    </q-footer>
   </q-layout>
 </template>
 
@@ -100,6 +116,7 @@ export default {
   data () {
     return {
       leftDrawerOpen: false,
+      rightDrawerOpen: false,
       essentialLinks: linksData
     }
   }
