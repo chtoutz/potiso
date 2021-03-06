@@ -6,6 +6,11 @@ node_modules
 .quasar
 /dist
 
+# Go related directories and files
+*.db
+/src-go/go.mod
+/src-go/go.sum
+
 # Cordova related directories and files
 /src-cordova/node_modules
 /src-cordova/platforms

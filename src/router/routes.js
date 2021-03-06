@@ -8,6 +8,22 @@ const routes = [
     ]
   },
 
+  {
+    path: '/grainotheque',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/Seeds.vue') }
+    ]
+  },
+
+  {
+    path: '/outils',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/Tools.vue') }
+    ]
+  },
+
   // Always leave this as last one,
   // but you can also remove it
   {

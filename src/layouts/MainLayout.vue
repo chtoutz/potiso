@@ -5,23 +5,33 @@
         <q-btn dense flat round icon="menu" aria-label="Left menu" @click="leftDrawerOpen = !leftDrawerOpen" />
 
         <q-toolbar-title>
-          <q-avatar>
+          <!-- <q-avatar>
             <img src="https://cdn.quasar.dev/logo/svg/quasar-logo.svg">
-          </q-avatar>
+          </q-avatar> -->
           Pot'Iso
         </q-toolbar-title>
+
+        <q-tabs align="center" inline-label>
+          <q-route-tab to="/potager" label="Potager" icon="eco" />
+          <!-- <q-route-tab to="/outilage" label="Outillage" icon="handyman" /> -->
+          <!-- <q-route-tab to="/accessoires" label="Accessoires" icon="cases" /> -->
+          <q-route-tab to="/outils" label="Outils/Accessoires" icon="handyman" />
+          <q-route-tab to="/grainotheque" label="Grainothèque" icon="local_florist" />
+        </q-tabs>
+
+        <q-space />
 
         <q-btn flat round dense icon="account_circle" class="q-mr-xs" />
 
         <q-btn dense flat round icon="menu" aria-label="Right menu" @click="rightDrawerOpen = !rightDrawerOpen" />
       </q-toolbar>
 
-      <q-tabs align="left" class="bg-light-green-5">
+      <!-- <q-tabs align="left" class="bg-light-green-5">
         <q-route-tab to="/potager" label="Potager" />
         <q-route-tab to="/outilage" label="Outillage" />
         <q-route-tab to="/accessoires" label="Accessoires" />
         <q-route-tab to="/grainotheque" label="Grainothèque" />
-      </q-tabs>
+      </q-tabs> -->
     </q-header>
 
     <q-drawer show-if-above v-model="leftDrawerOpen" side="left" bordered content-class="bg-grey-1">

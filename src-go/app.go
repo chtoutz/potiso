@@ -3,7 +3,7 @@ package main
 import (
 	"database/sql"
 
-	"github.com/gok/handlers"
+	"github.com/chtoutz/vuasar/handlers"
 
 	"github.com/labstack/echo"
 	// "github.com/labstack/echo/engine/standard"
@@ -17,7 +17,10 @@ func main() {
 
 	e := echo.New()
 
-	e.File("/", "public/index.html")
+	e.File("/", "../dist/spa/index.html")
+	// e.File("/", "public/index.html")
+	e.Static("/public", "../dist/spa")
+
 	e.GET("/tasks", handlers.GetTasks(db))
 	e.PUT("/tasks", handlers.PutTask(db))
 	e.DELETE("/tasks/:id", handlers.DeleteTask(db))
